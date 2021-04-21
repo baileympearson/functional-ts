@@ -28,9 +28,32 @@ describe('find tests', () => {
             let result = evenFinder(source)
             expect(result).toEqual(none())  
         })
+
+        it('should return none on an empty iterable', () => {
+            let source: number[] = []
+            let evenFinder = find(isEven)
+            let result = evenFinder(source)
+            expect(result).toEqual(none())  
+        })
     })
 
     describe('non-curried tests', () => {
-        
+        it('should find the first element in the iterable', () => {
+            let source = [1,2,3,4,5]
+            let result = find(isEven, source)
+            expect(result).toEqual(some(2))
+        })
+
+        it('should return none if there are no matches in the iterable', () => {
+            let source = [1,3,5]
+            let result = find(isEven, source)
+            expect(result).toEqual(none())
+        })
+
+        it('should return none on an empty iterable', () => {
+            let source: number[] = []
+            let result = find(isEven, source)
+            expect(result).toEqual(none())  
+        })
     })
 })
