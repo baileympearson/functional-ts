@@ -1,4 +1,2 @@
-
-
-export { map } from './core/map';
-export { filter } from './core/filter';
+export { map } from './core/map'
+export { filter } from './core/filter'

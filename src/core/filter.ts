@@ -1,4 +1,4 @@
-export type Id<T> = (arg0: Iterable<T>) => Iterable<T> 
+export type Id<T> = (arg0: Iterable<T>) => Iterable<T>
 export function filter<T>(pred: (arg0: T) => boolean): (arg0: Iterable<T>) => Iterable<T>
 export function filter<T>(pred: (arg0: T) => boolean, iter: Iterable<T>): Iterable<T>
 
