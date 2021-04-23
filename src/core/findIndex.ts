@@ -1,10 +1,10 @@
 import { Optional, some, none } from '../utility/optional'
 import { enumerate } from './enumerate'
 
-export function find<T>(pred: (arg0: T) => boolean): (arg0: Iterable<T>) => Optional<number>
-export function find<T>(pred: (arg0: T) => boolean, iter: Iterable<T>): Optional<number>
+export function findIndex<T>(pred: (arg0: T) => boolean): (arg0: Iterable<T>) => Optional<number>
+export function findIndex<T>(pred: (arg0: T) => boolean, iter: Iterable<T>): Optional<number>
 
-export function find<T>(
+export function findIndex<T>(
   pred: (arg0: T) => boolean,
   iter?: Iterable<T>
 ): ((arg0: Iterable<T>) => Optional<number>) | Optional<number> {
