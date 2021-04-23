@@ -1,4 +1,4 @@
-export function* zip2<T, S>(iter1: Iterable<T>, iter2: Iterable<S>): Iterable<[T, S]> {
+export function* zip2<T, S>(iter1: Iterable<T>, iter2: Iterable<S>): Generator<[T, S]> {
   const [it1, it2] = [iter1[Symbol.iterator](), iter2[Symbol.iterator]()]
   let value1 = it1.next()
   let value2 = it2.next()

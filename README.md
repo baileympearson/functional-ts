@@ -1,2 +1,2 @@
-## functional-ts
+# functional-ts
 
